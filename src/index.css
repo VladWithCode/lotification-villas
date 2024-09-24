@@ -42,3 +42,11 @@
 .social-link {
     filter: drop-shadow(3px 3px 1px rgb(0 0 0/0.3))
 }
+
+.barless {
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

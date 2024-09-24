@@ -9,11 +9,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
 	</head>
 	<body class="bg-light font-main">
-        <header class="sticky grid grid-cols-3 top-0 left-0 h-20 w-full border-b border-main bg-light z-50">
+        <header class="sticky grid grid-cols-3 grid-rows-1 top-0 left-0 h-20 w-full border-b border-main bg-light z-50">
             <div class="m-auto ml-4 w-6"></div>
-            <div class="basis-1/3 grow-0 shrink-0 my-auto">
-                <img src="/img/sibra_logo_256.webp" alt="Logo de Sibra Durango" class="w-full object-cover object-center py-1 mx-auto">
-            </div>
+            <img src="/img/sibra_logo_256.webp" alt="Logo de Sibra Durango" class="w-full max-h-[80%] object-scale-down object-center m-auto">
             <div class="m-auto mr-4">
                 <button id="nav-toggler" class="grid grid-cols-3 grid-rows-3 gap-0.5 w-7 h-7 group">
                     <div class="flex aspect-square w-1 rounded-full bg-main"></div>
@@ -28,52 +26,54 @@
                 </button>
             </div>
         </header>
-        <main class="max-w-full">
+        <main class="max-w-full overflow-x-hidden">
             <div class="relative p-2">
                 <img src="/img/land-6.jpg" alt="" class="w-full h-[70vh] object-cover object-center inset-0 rounded-lg brightness-90 shadow shadow-stone-700">
                 <div class="absolute text-center top-1/2 left-0 w-full -translate-y-1/2 px-2">
-                    <h1 class="w-fit text-2xl font-bold text-stone-50 mx-auto" style="text-shadow: 0px 5px 8px #44403c">
+                    <h1 class="w-fit text-2xl font-bold text-stone-50 mx-auto md:text-4xl" style="text-shadow: 0px 5px 8px #44403c">
                         Innovación y Bienestar <br>
-                        <span class="text-base">El Hogar que Siempre Soñaste</span>
+                        <span class="text-base md:text-xl">El Hogar que Siempre Soñaste</span>
                     </h1>
                     <div class="py-4"></div>
                     <a
                         href="#"
-                        class="block w-fit text-stone-50 font-medium border border-accent bg-accent py-2 px-8 rounded mx-auto shadow shadow-stone-700 transition hover:scale-105">
+                        class="block w-fit text-stone-50 font-medium border border-accent bg-accent py-2 px-8 rounded mx-auto shadow shadow-stone-700 transition hover:scale-105 md:text-lg">
                         Agenda tu cita
                     </a>
                 </div>
             </div>
             <div class="py-6"></div>
-            <div class="">
+            <div class="max-w-screen-md xl:max-w-screen-lg mx-auto">
                 <h2 class="text-xl text-stone-800 text-center font-secondary">
                     Bienvenida/o a<br>
                     <span class="text-4xl font-semibold">Villa Emperadores</span>
                 </h2>
                 <div class="py-2"></div>
-                <p class="mx-auto px-4">
-                En Villa Emperadores, creemos que un hogar de calidad no tiene que
-                estar fuera de tu alcance. Nuestro desarrollo ofrece terrenos asequibles,
-                ideales para quienes buscan un espacio propio sin comprometer su presupuesto.
+                <p class="w-fit mx-auto px-4 text-center">
+                    En Villa Emperadores, creemos que un hogar de calidad no tiene que
+                    estar fuera de tu alcance.
+                    <br class="hidden xl:block">Nuestro desarrollo ofrece terrenos asequibles,
+                    ideales para quienes buscan un espacio propio sin comprometer su presupuesto.
                 </p>
             </div>
-            <div class="py-2"></div>
+            <div class="py-2 md:py-4"></div>
             <div class="">
-                <h2 class="text-xl text-stone-600 text-center font-secondary">Pensado para ti</h2>
+                <h2 class="text-xl text-stone-600 text-center font-secondary md:text-2xl">Pensado para ti</h2>
                 <div class="py-0.5"></div>
-                <p class="text-sm text-stone-600 text-center mx-auto px-4">
+                <p class="text-sm text-stone-600 text-center mx-auto px-4 md:text-base">
                 Diseñado para ajustarse a tus necesidades.
-            </p>
-                <div class="relative w-dvw overflow-hidden">
-                    <div class="relative flex overflow-y-hidden overflow-x-auto p-4 pb-8 amenity-slider" style="" data-amenity-slider>
+                </p>
+                <div class="py-1"></div>
+                <div class="relative w-dvw max-w-full overflow-hidden">
+                    <div class="relative flex overflow-y-hidden overflow-x-auto pb-8 amenity-slider md:pt-8 md:pb-12 barless" data-amenity-slider>
 
                         <div class="basis-full grow-0 shrink-0">
                             <div
-                                class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide"
+                                class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide md:h-52 md:w-52"
                                 data-amenity-slide="0">
                                 <!-- <img src="/img/land-6.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center brightness-75 rounded-full -z-10"> -->
                                 <div class="absolute top-full left-1/2 -translate-x-1/2 -z-10" data-amenity-slide-label>
-                                    <p class="text-stone-600 font-medium uppercase pt-2">Pavimentación</p>
+                                    <p class="text-stone-600 font-medium uppercase pt-2 md:text-lg">Pavimentación</p>
                                 </div>
                                 <div class="absolute bottom-3 left-3 text-light invisible" data-amenity-slide-data>
                                     <p class="font-medium uppercase" data-amenity-slide-title>Pavimentación</p>
@@ -137,8 +137,9 @@
                 </div>
             </div>
             <div class="py-4"></div>
-            <div class="px-4">
-                <h2 class="text-xl text-stone-800 font-bold font-secondary">Acerca de Nosotros</h2>
+            <div class="relative md:max-w-screen-md xl:max-w-screen-lg mx-auto px-4 py-28">
+                <div class="absolute w-screen h-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-stone-50 -z-10"></div>
+                <h2 class="text-xl text-stone-800 font-bold font-secondary md:text-2xl">Acerca de Nosotros</h2>
                 <div class="py-1"></div>
                 <p class="text-stone-600">
                 Lorem ipsum dolor sit amet,
@@ -149,8 +150,8 @@
                 </p>
             </div>
             <div class="py-2"></div>
-            <div class="px-4">
-                <h2 class="text-xl text-stone-800 font-bold font-secondary">¿Por qué comprar en Villa Emperadores?</h2>
+            <div class="md:max-w-screen-md xl:max-w-screen-lg mx-auto px-4 py-28">
+                <h2 class="text-xl text-stone-800 font-bold font-secondary md:text-2xl">¿Por qué comprar en Villa Emperadores?</h2>
                 <div class="py-1"></div>
                 <p class="text-stone-600">
                 Lorem ipsum dolor sit amet,
@@ -160,14 +161,13 @@
                 quas exercitationem.
                 </p>
             </div>
-            <div class="py-4"></div>
-            <div class="gallery pt-3">
+            <div class="gallery pt-3 xl:pt-5">
                 <h2 class="text-3xl text-stone-200 text-center font-semibold font-secondary">Galería</h2>
                 <div class="py-0.5"></div>
                 <p class="text-stone-300 text-center">Mira las fotos que tenemos de Villa Emperadores</p>
-                <div class="py-2"></div>
-                <div class="relative h-[75vh] w-dvw pb-12">
-                    <div class="relative h-full flex overflow-auto">
+                <div class="py-2 xl:py-3"></div>
+                <div class="relative h-[75vh] w-dvw max-w-full pb-12">
+                    <div class="relative h-full flex overflow-auto barless">
                         <div class="basis-full grow-0 shrink-0 max-w-full h-full">
                             <img class="w-full h-full object-cover object-center" src="/img/land-6.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
                         </div>
@@ -218,8 +218,8 @@
                 </div>
             </div>
             <div class="py-4"></div>
-            <div class="px-4">
-                <h2 class="text-xl text-stone-800 font-bold font-secondary">Lotificacion</h2>
+            <div class="max-w-screen-md xl:max-w-screen-lg mx-auto px-4 py-24">
+                <h2 class="text-xl text-stone-800 font-bold font-secondary md:text-2xl">Lotificacion</h2>
                 <div class="py-1"></div>
                 <p class="text-stone-600">
                 Lorem ipsum dolor sit amet,
@@ -230,28 +230,28 @@
                 </p>
             </div>
             <div class="py-4"></div>
-            <div class="contact px-4 py-3">
+            <div class="contact px-4 py-3 md:py-6">
                 <h2 class="text-3xl text-stone-100 text-center font-bold font-secondary">¡Contactanos!</h2>
                 <div class="py-2"></div>
-                <p class="text-stone-300">
+                <p class="text-stone-300 text-center w-fit xl:max-w-screen-lg mx-auto">
                 Recibe más información directo en tu celular
                 y permite que nuestros asesores te ayuden a
                 conocer Villa Emperadores
                 </p>
                 <div class="py-2"></div>
-                <div class="relative w-full">
+                <div class="relative w-full max-w-screen-sm xl:max-w-screen-lg xl:flex xl:justify-center mx-auto">
                     <form
-                        class="relative bg-light rounded-lg px-4 py-2 space-y-2 z-10 shadow shadow-stone-400"
+                        class="relative bg-light rounded-lg px-4 py-2 space-y-2 z-10 shadow shadow-stone-400 md:py-4 md:space-y-3"
                         id="contact-form">
                         <div class="space-y-1">
-                            <label for="name" class="text-sm text-stone-600 block">Nombre</label>
-                            <input type="text" name="name" id="name" class="block w-full border-2 border-main px-2 py-1 rounded-md focus:outline-secondary">
+                            <label for="name" class="text-sm text-stone-600 block md:text-base">Nombre</label>
+                            <input type="text" name="name" id="name" class="block w-full border-2 border-main px-2 py-1 rounded-md focus:outline-secondary md:text-lg">
                         </div>
                         <div class="space-y-1">
-                            <label for="phone" class="text-sm text-stone-600 block">Telefono</label>
-                            <input type="tel" name="phone" id="phone" class="block w-full border-2 border-main px-2 py-1 rounded-md focus:outline-secondary">
+                            <label for="phone" class="text-sm text-stone-600 block md:text-base">Telefono</label>
+                            <input type="tel" name="phone" id="phone" class="block w-full border-2 border-main px-2 py-1 rounded-md focus:outline-secondary md:text-lg">
                         </div>
-                        <div class="flex gap-3">
+                        <div class="flex gap-3 py-2">
                             <input type="checkbox" name="consent" id="consent" class="w-6 border-2 border-main px-2 py-1 rounded-md focus:outline-secondary">
                             <label for="name" class="text-xs text-stone-600">Acepto que se me contacte a tráves de Whatsapp o llamada teléfonica.</label>
                         </div>
@@ -259,32 +259,32 @@
                             Enviar
                         </button>
                     </form>
-                    <div class="relative bottom-2 left-0 right-0 bg-stone-50 pt-4 pb-2 rounded-b-md z-0 px-4">
-                        <h3 class="text-lg font-bold font-secondary text-stone-800">Envianos un mensaje</h3>
-                        <div class="py-1"></div>
+                    <div class="relative bottom-2 left-0 right-0 bg-stone-50 pt-4 pb-2 rounded-b-md z-0 px-4 md:pt-6 xl:bottom-0 xl:top-0 xl:-left-2 xl:pl-6 xl:rounded-e-md">
+                        <h3 class="text-lg font-bold font-secondary text-stone-800 md:text-xl">Envianos un mensaje</h3>
+                        <div class="py-1 md:py-1.5"></div>
                         <div class="space-y-0.5">
-                            <p class="text-xs font-bold">Sibra Durango (matriz)</p>
-                            <p class="flex text-stone-600 gap-2">
+                            <p class="text-xs font-bold md:text-sm">Sibra Durango (matriz)</p>
+                            <p class="flex text-stone-600 gap-2 md:text-lg">
                                 <svg class="fill-current w-6 h-6">
                                     <use href="/svg/sprites.svg#phone"></use>
                                 </svg>
                                 <span>(618) 194-1145</span>
                             </p>
                         </div>
-                        <div class="py-1"></div>
+                        <div class="py-1 md:py-1.5"></div>
                         <div class="space-y-0.5">
-                            <p class="text-xs font-bold">Whatsapp</p>
-                            <p class="flex text-stone-600 gap-2">
+                            <p class="text-xs font-bold md:text-sm">Whatsapp</p>
+                            <p class="flex text-stone-600 gap-2 md:text-lg">
                                 <svg class="fill-current w-6 h-6">
-                                    <use href="/svg/sprites.svg#phone"></use>
+                                    <use href="/svg/wsp.svg#wsp"></use>
                                 </svg>
                                 <span>(618) 166-4111</span>
                             </p>
                         </div>
-                        <div class="py-1"></div>
+                        <div class="py-1 md:py-1.5"></div>
                         <div class="space-y-0.5">
-                            <p class="text-xs font-bold">Correo Electronico</p>
-                            <p class="flex text-stone-600 gap-2">
+                            <p class="text-xs font-bold md:text-sm">Correo Electronico</p>
+                            <p class="flex text-stone-600 gap-2 md:text-lg">
                                 <svg class="fill-current w-6 h-6">
                                     <use href="/svg/sprites.svg#email"></use>
                                 </svg>
@@ -294,8 +294,8 @@
                     </div>
                 </div>
             </div>
-            <div class="px-4 py-2 bg-stone-50">
-                <h2 class="text-xl text-stone-800 font-bold font-secondary">Oficinas</h2>
+            <div class="max-w-screen-md px-4 pt-12 pb-3 mx-auto xl:max-w-screen-lg">
+                <h2 class="text-xl text-stone-800 font-bold font-secondary xl:text-2xl">Oficinas</h2>
                 <div class="py-1"></div>
                 <p class="text-stone-600">
                 Visita las oficinas de Sibra Durango para obtener más información sobre Villa Emperadores
@@ -314,101 +314,103 @@
             </div>
         </main>
         <footer class="px-4 py-2 bg-main text-stone-50">
-            <div class="space-y-4">
-                <div class="h-24">
-                    <img 
+            <div class="max-w-screen-md mx-auto xl:max-w-screen-lg lg:flex lg:gap-8 lg:pt-8 lg:pb-16 lg:px-12 lg:justify-evenly xl:justify-start">
+                <div class="space-y-4">
+                    <div class="h-24">
+                        <img 
                         class="h-full max-w-full mx-auto object-center object-cover drop-shadow-xl"
                         src="/img/sibra_logo_white_256.webp"
                         alt="Logo de Sibra Durango">
-                </div>
-                <ul class="flex justify-evenly">
-                    <li class="">
-                        <a href="#">
-                            <svg class="social-link w-6 h-6 fill-stone-50 cursor-pointer hover:fill-[#1877F2]">
-                                <use href="/svg/sprites.svg#facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <!-- <li class="">
-                        <a href="#">
+                    </div>
+                    <ul class="flex justify-evenly">
+                        <li class="">
+                            <a href="#">
+                                <svg class="social-link w-6 h-6 fill-stone-50 cursor-pointer hover:fill-[#1877F2]">
+                                    <use href="/svg/sprites.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <!-- <li class="">
+                            <a href="#">
                             <svg class="w-6 h-6 fill-stone-50">
-                                <use href="/svg/sprites.svg#twitter"></use>
+                            <use href="/svg/sprites.svg#twitter"></use>
                             </svg>
-                        </a>
-                    </li> -->
-                    <li class="">
-                        <a href="#">
-                            <svg class="social-link w-6 h-6 fill-stone-50 cursor-pointer hover:fill-[#c13584]">
-                                <use href="/svg/sprites.svg#instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="py-2"></div>
-            <div class="">
-                <h3 class="text-sm font-semibold">Navegacion</h3>
-                <div class="py-0.5"></div>
-                <nav class="flex font-thin gap-1">
-                    <ul class="basis-1/2 grow-0 space-y-1.5">
-                        <li class="underline underline-offset-4">
-                            <a href="/">Inicio</a>
-                        </li>
-                        <li class="underline underline-offset-4 space-y-1">
-                            <a href="#acerca_de">Acerca de<br> Nosotros</a>
-                        </li>
-                        <li class="underline underline-offset-4">
-                            <a href="#gallery">Galería</a>
-                        </li>
+                            </a>
+                            </li> -->
+                            <li class="">
+                                <a href="#">
+                                    <svg class="social-link w-6 h-6 fill-stone-50 cursor-pointer hover:fill-[#c13584]">
+                                        <use href="/svg/sprites.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
                     </ul>
-                    <ul class="basis-1/2 grow-0 space-y-1.5">
-                        <li class="underline underline-offset-4">
-                            <a href="#contacto">Contacto</a>
-                        </li>
-                        <li class="underline underline-offset-4">
-                            <a href="#ubicacion">Ubicacion</a>
-                        </li>
-                        <li class="underline underline-offset-4">
-                            <a href="#oficinas">Oficinas</a>
-                        </li>
-                    </ul>
-                </nav>
+                </div>
+                <div class="py-2"></div>
+                <div class="">
+                    <h3 class="text-sm font-semibold">Navegacion</h3>
+                    <div class="py-0.5"></div>
+                    <nav class="flex font-thin gap-1 lg:flex-col lg:gap-1.5">
+                        <ul class="basis-1/2 grow-0 space-y-1.5">
+                            <li class="underline underline-offset-4">
+                                <a href="/">Inicio</a>
+                            </li>
+                            <li class="underline underline-offset-4 space-y-1">
+                                <a href="#acerca_de">Acerca de<br class="lg:hidden"> Nosotros</a>
+                            </li>
+                            <li class="underline underline-offset-4">
+                                <a href="#gallery">Galería</a>
+                            </li>
+                        </ul>
+                        <ul class="basis-1/2 grow-0 space-y-1.5">
+                            <li class="underline underline-offset-4">
+                                <a href="#contacto">Contacto</a>
+                            </li>
+                            <li class="underline underline-offset-4">
+                                <a href="#ubicacion">Ubicacion</a>
+                            </li>
+                            <li class="underline underline-offset-4">
+                                <a href="#oficinas">Oficinas</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="py-2"></div>
+                <div class="">
+                    <h3 class="text-sm font-semibold">Contacto</h3>
+                    <div class="py-0.5"></div>
+                    <div class="space-y-0.5">
+                        <p class="text-xs font-bold">Sibra Durango (matriz)</p>
+                        <p class="flex text-stone-100 gap-2">
+                        <svg class="fill-current w-6 h-6">
+                            <use href="/svg/sprites.svg#phone"></use>
+                        </svg>
+                        <span>(618) 194-1145</span>
+                        </p>
+                    </div>
+                    <div class="py-1"></div>
+                    <div class="space-y-0.5">
+                        <p class="text-xs font-bold">Whatsapp</p>
+                        <p class="flex text-stone-100 gap-2">
+                        <svg class="fill-current w-6 h-6">
+                            <use href="/svg/sprites.svg#phone"></use>
+                        </svg>
+                        <span>(618) 166-4111</span>
+                        </p>
+                    </div>
+                    <div class="py-1"></div>
+                    <div class="space-y-0.5">
+                        <p class="text-xs font-bold">Correo Electronico</p>
+                        <p class="flex text-stone-100 gap-2">
+                        <svg class="fill-current w-6 h-6">
+                            <use href="/svg/sprites.svg#email"></use>
+                        </svg>
+                        <span>contacto@sibradgo.com.mx</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="py-4"></div>
             </div>
-            <div class="py-2"></div>
-            <div class="">
-                <h3 class="text-sm font-semibold">Contacto</h3>
-                <div class="py-0.5"></div>
-                <div class="space-y-0.5">
-                    <p class="text-xs font-bold">Sibra Durango (matriz)</p>
-                    <p class="flex text-stone-100 gap-2">
-                    <svg class="fill-current w-6 h-6">
-                        <use href="/svg/sprites.svg#phone"></use>
-                    </svg>
-                    <span>(618) 194-1145</span>
-                    </p>
-                </div>
-                <div class="py-1"></div>
-                <div class="space-y-0.5">
-                    <p class="text-xs font-bold">Whatsapp</p>
-                    <p class="flex text-stone-100 gap-2">
-                    <svg class="fill-current w-6 h-6">
-                        <use href="/svg/sprites.svg#phone"></use>
-                    </svg>
-                    <span>(618) 166-4111</span>
-                    </p>
-                </div>
-                <div class="py-1"></div>
-                <div class="space-y-0.5">
-                    <p class="text-xs font-bold">Correo Electronico</p>
-                    <p class="flex text-stone-100 gap-2">
-                    <svg class="fill-current w-6 h-6">
-                        <use href="/svg/sprites.svg#email"></use>
-                    </svg>
-                    <span>contacto@sibradgo.com.mx</span>
-                    </p>
-                </div>
-            </div>
-            <div class="py-4"></div>
         </footer>
 
         <div class="fixed bottom-4 right-4">
