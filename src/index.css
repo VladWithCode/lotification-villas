@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body {
+    @apply bg-light;
+}
+
+.amenity-slider {
+    &-slide {
+        background-image: 
+        url('../public/img/land-6.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &-slide.active {
+        background-image: 
+        linear-gradient(to top, rgb(0 0 0/.75) 40%, rgb(0 0 0/0.1) 75%),
+        url('../public/img/land-6.jpg');
+    }
+}
+
+.gallery {
+    background-image: 
+    linear-gradient(rgb(0 0 0/.75), rgb(0 0 0/.55)),
+    url('../public/img/land-6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact {
+    background-image: 
+    linear-gradient(rgb(0 0 0/.75), rgb(0 0 0/.55)),
+    url('../public/img/land-6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.social-link {
+    filter: drop-shadow(3px 3px 1px rgb(0 0 0/0.3))
+}

@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Villa Emperadores</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-light font-main">
+        <header class="sticky grid grid-cols-3 top-0 left-0 h-20 w-full border-b border-main bg-light z-50">
+            <div class="m-auto ml-4 w-6"></div>
+            <div class="basis-1/3 grow-0 shrink-0 my-auto">
+                <img src="/img/sibra_logo_256.webp" alt="Logo de Sibra Durango" class="w-full object-cover object-center py-1 mx-auto">
+            </div>
+            <div class="m-auto mr-4">
+                <button id="nav-toggler" class="grid grid-cols-3 grid-rows-3 gap-0.5 w-7 h-7 group">
+                    <div class="flex aspect-square w-1 rounded-full bg-main"></div>
+                    <div class="flex aspect-square w-1 rounded-full bg-main transition group-hover:scale-125 group-active:scale-125"></div>
+                    <div class="flex aspect-square w-1 rounded-full bg-main"></div>
+                    <div class="flex aspect-square w-1 rounded-full bg-main transition group-hover:scale-125 group-active:scale-125"></div>
+                    <div class="flex aspect-square w-1 rounded-full bg-main transition group-hover:scale-150 group-active:scale-150"></div>
+                    <div class="flex aspect-square w-1 rounded-full bg-main transition group-hover:scale-125 group-active:scale-125"></div>
+                    <div class="flex aspect-square w-1 rounded-full bg-main"></div>
+                    <div class="flex aspect-square w-1 rounded-full bg-main transition group-hover:scale-125 group-active:scale-125"></div>
+                    <div class="flex aspect-square w-1 rounded-full bg-main"></div>
+                </button>
+            </div>
+        </header>
+        <main class="max-w-full">
+            <div class="relative p-2">
+                <img src="/img/land-6.jpg" alt="" class="w-full h-[70vh] object-cover object-center inset-0 rounded-lg brightness-90 shadow shadow-stone-700">
+                <div class="absolute text-center top-1/2 left-0 w-full -translate-y-1/2 px-2">
+                    <h1 class="w-fit text-2xl font-bold text-stone-50 mx-auto" style="text-shadow: 0px 5px 8px #44403c">
+                        Innovación y Bienestar <br>
+                        <span class="text-base">El Hogar que Siempre Soñaste</span>
+                    </h1>
+                    <div class="py-4"></div>
+                    <a
+                        href="#"
+                        class="block w-fit text-stone-50 font-medium border border-accent bg-accent py-2 px-8 rounded mx-auto shadow shadow-stone-700 transition hover:scale-105">
+                        Agenda tu cita
+                    </a>
+                </div>
+            </div>
+            <div class="py-6"></div>
+            <div class="">
+                <h2 class="text-xl text-stone-800 text-center font-secondary">
+                    Bienvenida/o a<br>
+                    <span class="text-4xl font-semibold">Villa Emperadores</span>
+                </h2>
+                <div class="py-2"></div>
+                <p class="mx-auto px-4">
+                En Villa Emperadores, creemos que un hogar de calidad no tiene que
+                estar fuera de tu alcance. Nuestro desarrollo ofrece terrenos asequibles,
+                ideales para quienes buscan un espacio propio sin comprometer su presupuesto.
+                </p>
+            </div>
+            <div class="py-2"></div>
+            <div class="">
+                <h2 class="text-xl text-stone-600 text-center font-secondary">Pensado para ti</h2>
+                <div class="py-0.5"></div>
+                <p class="text-sm text-stone-600 text-center mx-auto px-4">
+                Diseñado para ajustarse a tus necesidades.
+            </p>
+                <div class="relative w-dvw overflow-hidden">
+                    <div class="relative flex overflow-y-hidden overflow-x-auto p-4 pb-8 amenity-slider" style="" data-amenity-slider>
+
+                        <div class="basis-full grow-0 shrink-0">
+                            <div
+                                class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide"
+                                data-amenity-slide="0">
+                                <!-- <img src="/img/land-6.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center brightness-75 rounded-full -z-10"> -->
+                                <div class="absolute top-full left-1/2 -translate-x-1/2 -z-10" data-amenity-slide-label>
+                                    <p class="text-stone-600 font-medium uppercase pt-2">Pavimentación</p>
+                                </div>
+                                <div class="absolute bottom-3 left-3 text-light invisible" data-amenity-slide-data>
+                                    <p class="font-medium uppercase" data-amenity-slide-title>Pavimentación</p>
+                                    <div class="py-0.5"></div>
+                                    <p class="text-sm font-" data-amenity-slide-description>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basis-full grow-0 shrink-0">
+                            <div
+                                class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide"
+                                data-amenity-slide="0">
+                                <!-- <img src="/img/land-6.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center brightness-75 rounded-full -z-10"> -->
+                                <div class="absolute top-full left-1/2 -translate-x-1/2 -z-10" data-amenity-slide-label>
+                                    <p class="text-stone-600 font-medium uppercase pt-2">Pavimentación</p>
+                                </div>
+                                <div class="absolute bottom-3 left-3 text-light invisible" data-amenity-slide-data>
+                                    <p class="font-medium uppercase" data-amenity-slide-title>Pavimentación</p>
+                                    <div class="py-0.5"></div>
+                                    <p class="text-sm font-" data-amenity-slide-description>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basis-full grow-0 shrink-0">
+                            <div
+                                class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide"
+                                data-amenity-slide="0">
+                                <!-- <img src="/img/land-6.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center brightness-75 rounded-full -z-10"> -->
+                                <div class="absolute top-full left-1/2 -translate-x-1/2 -z-10" data-amenity-slide-label>
+                                    <p class="text-stone-600 font-medium uppercase pt-2">Pavimentación</p>
+                                </div>
+                                <div class="absolute bottom-3 left-3 text-light invisible" data-amenity-slide-data>
+                                    <p class="font-medium uppercase" data-amenity-slide-title>Pavimentación</p>
+                                    <div class="py-0.5"></div>
+                                    <p class="text-sm font-" data-amenity-slide-description>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute top-1/2 left-2 -translate-y-1/2">
+                        <button 
+                            id="amenity-slider-prev"
+                            class="flex items-center justify-center bg-secondary bg-opacity-60 backdrop-blur-sm rounded-full p-1 shadow-main"
+                            style="box-shadow: 0px 5px 8px -6px var(--tw-shadow-color);">
+                            <svg class="w-10 h-10 fill-main rotate-180">
+                                <use href="/svg/sprites.svg#angle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="absolute top-1/2 right-2 -translate-y-1/2">
+                        <button
+                            id="amenity-slider-next"
+                            class="flex items-center justify-center bg-secondary bg-opacity-60 backdrop-blur-sm rounded-full p-1 shadow-main"
+                            style="box-shadow: 0px 5px 8px -6px var(--tw-shadow-color);">
+                            <svg class="w-10 h-10 fill-main">
+                                <use href="/svg/sprites.svg#angle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="py-4"></div>
+            <div class="px-4">
+                <h2 class="text-xl text-stone-800 font-bold font-secondary">Acerca de Nosotros</h2>
+                <div class="py-1"></div>
+                <p class="text-stone-600">
+                Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+                Voluptatem molestiae ratione vero?
+                Ea sapiente dolor explicabo voluptates deserunt,
+                quas exercitationem.
+                </p>
+            </div>
+            <div class="py-2"></div>
+            <div class="px-4">
+                <h2 class="text-xl text-stone-800 font-bold font-secondary">¿Por qué comprar en Villa Emperadores?</h2>
+                <div class="py-1"></div>
+                <p class="text-stone-600">
+                Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+                Voluptatem molestiae ratione vero?
+                Ea sapiente dolor explicabo voluptates deserunt,
+                quas exercitationem.
+                </p>
+            </div>
+            <div class="py-4"></div>
+            <div class="gallery pt-3">
+                <h2 class="text-3xl text-stone-200 text-center font-semibold font-secondary">Galería</h2>
+                <div class="py-0.5"></div>
+                <p class="text-stone-300 text-center">Mira las fotos que tenemos de Villa Emperadores</p>
+                <div class="py-2"></div>
+                <div class="relative h-[75vh] w-dvw pb-12">
+                    <div class="relative h-full flex overflow-auto">
+                        <div class="basis-full grow-0 shrink-0 max-w-full h-full">
+                            <img class="w-full h-full object-cover object-center" src="/img/land-6.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
+                        </div>
+                        <div class="basis-full grow-0 shrink-0 max-w-full h-full">
+                            <img class="w-full h-full object-cover object-center" src="/img/land-6.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
+                        </div>
+                        <div class="basis-full grow-0 shrink-0 max-w-full h-full">
+                            <img class="w-full h-full object-cover object-center" src="/img/land-6.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
+                        </div>
+                        <div class="basis-full grow-0 shrink-0 max-w-full h-full">
+                            <img class="w-full h-full object-cover object-center" src="/img/land-6.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 flex h-12 bg-secondary">
+                        <button class="flex basis-1/3 grow-0 shrink-0 border-r-2 border-main">
+                            <svg class="m-auto w-10 h-10 fill-main rotate-180">
+                                <use href="/svg/sprites.svg#angle"></use>
+                            </svg>
+                        </button>
+                        <div class="flex flex-col items-center justify-center gap-1 basis-1/6 grow-0 shrink-0">
+                            <div class="flex gap-1">
+                                <div class="h-1.5 w-1.5 bg-main"></div>
+                                <div class="h-1.5 w-1.5 bg-main"></div>
+                                <div class="h-1.5 w-1.5 bg-main"></div>
+                            </div>
+                            <div class="flex gap-1">
+                                <div class="h-1.5 w-1.5 bg-main"></div>
+                                <div class="h-1.5 w-1.5 bg-main"></div>
+                                <div class="h-1.5 w-1.5 bg-main"></div>
+                            </div>
+                            <div class="flex gap-1">
+                                <div class="h-1.5 w-1.5 bg-main"></div>
+                                <div class="h-1.5 w-1.5 bg-main"></div>
+                                <div class="h-1.5 w-1.5 bg-main"></div>
+                            </div>
+                        </div>
+                        <div class="basis-1/6 grow-0 shrink-0 bg-stone-50">
+                            <select class="w-full h-full text-lg text-center" name="gallery-slide-select" id="gallery-slide-select">
+                                <option value="0">1</option>
+                            </select>
+                        </div>
+                        <button class="flex basis-1/3 grow-0 shrink-0 border-l-2 border-main">
+                            <svg class="m-auto w-10 h-10 fill-main">
+                                <use href="/svg/sprites.svg#angle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="py-4"></div>
+            <div class="px-4">
+                <h2 class="text-xl text-stone-800 font-bold font-secondary">Lotificacion</h2>
+                <div class="py-1"></div>
+                <p class="text-stone-600">
+                Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit.
+                Voluptatem molestiae ratione vero?
+                Ea sapiente dolor explicabo voluptates deserunt,
+                quas exercitationem.
+                </p>
+            </div>
+            <div class="py-4"></div>
+            <div class="contact px-4 py-3">
+                <h2 class="text-3xl text-stone-100 text-center font-bold font-secondary">¡Contactanos!</h2>
+                <div class="py-2"></div>
+                <p class="text-stone-300">
+                Recibe más información directo en tu celular
+                y permite que nuestros asesores te ayuden a
+                conocer Villa Emperadores
+                </p>
+                <div class="py-2"></div>
+                <div class="relative w-full">
+                    <form
+                        class="relative bg-light rounded-lg px-4 py-2 space-y-2 z-10 shadow shadow-stone-400"
+                        id="contact-form">
+                        <div class="space-y-1">
+                            <label for="name" class="text-sm text-stone-600 block">Nombre</label>
+                            <input type="text" name="name" id="name" class="block w-full border-2 border-main px-2 py-1 rounded-md focus:outline-secondary">
+                        </div>
+                        <div class="space-y-1">
+                            <label for="phone" class="text-sm text-stone-600 block">Telefono</label>
+                            <input type="tel" name="phone" id="phone" class="block w-full border-2 border-main px-2 py-1 rounded-md focus:outline-secondary">
+                        </div>
+                        <div class="flex gap-3">
+                            <input type="checkbox" name="consent" id="consent" class="w-6 border-2 border-main px-2 py-1 rounded-md focus:outline-secondary">
+                            <label for="name" class="text-xs text-stone-600">Acepto que se me contacte a tráves de Whatsapp o llamada teléfonica.</label>
+                        </div>
+                        <button class="w-full bg-accent text-stone-50 font-medium py-2 rounded-md active:outline active:outline-secondary">
+                            Enviar
+                        </button>
+                    </form>
+                    <div class="relative bottom-2 left-0 right-0 bg-stone-50 pt-4 pb-2 rounded-b-md z-0 px-4">
+                        <h3 class="text-lg font-bold font-secondary text-stone-800">Envianos un mensaje</h3>
+                        <div class="py-1"></div>
+                        <div class="space-y-0.5">
+                            <p class="text-xs font-bold">Sibra Durango (matriz)</p>
+                            <p class="flex text-stone-600 gap-2">
+                                <svg class="fill-current w-6 h-6">
+                                    <use href="/svg/sprites.svg#phone"></use>
+                                </svg>
+                                <span>(618) 194-1145</span>
+                            </p>
+                        </div>
+                        <div class="py-1"></div>
+                        <div class="space-y-0.5">
+                            <p class="text-xs font-bold">Whatsapp</p>
+                            <p class="flex text-stone-600 gap-2">
+                                <svg class="fill-current w-6 h-6">
+                                    <use href="/svg/sprites.svg#phone"></use>
+                                </svg>
+                                <span>(618) 166-4111</span>
+                            </p>
+                        </div>
+                        <div class="py-1"></div>
+                        <div class="space-y-0.5">
+                            <p class="text-xs font-bold">Correo Electronico</p>
+                            <p class="flex text-stone-600 gap-2">
+                                <svg class="fill-current w-6 h-6">
+                                    <use href="/svg/sprites.svg#email"></use>
+                                </svg>
+                                <span>contacto@sibradgo.com.mx</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-4 py-2 bg-stone-50">
+                <h2 class="text-xl text-stone-800 font-bold font-secondary">Oficinas</h2>
+                <div class="py-1"></div>
+                <p class="text-stone-600">
+                Visita las oficinas de Sibra Durango para obtener más información sobre Villa Emperadores
+                </p>
+                <div class="py-1"></div>
+                <iframe
+                    class="w-full h-96 aspect-square rounded-md"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5154.422176489766!2d-104.66367542245388!3d24.00542002482791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bc8009b657647%3A0xe5fb385095a625ae!2sSIBRA%20Soluciones%20Inteligentes%20En%20Bienes%20Raices!5e0!3m2!1ses-419!2smx!4v1727130886258!5m2!1ses-419!2smx"
+                    width="600"
+                    height="600"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </main>
+        <footer class="px-4 py-2 bg-main text-stone-50">
+            <div class="space-y-4">
+                <div class="h-24">
+                    <img 
+                        class="h-full max-w-full mx-auto object-center object-cover drop-shadow-xl"
+                        src="/img/sibra_logo_white_256.webp"
+                        alt="Logo de Sibra Durango">
+                </div>
+                <ul class="flex justify-evenly">
+                    <li class="">
+                        <a href="#">
+                            <svg class="social-link w-6 h-6 fill-stone-50 cursor-pointer hover:fill-[#1877F2]">
+                                <use href="/svg/sprites.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <!-- <li class="">
+                        <a href="#">
+                            <svg class="w-6 h-6 fill-stone-50">
+                                <use href="/svg/sprites.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li> -->
+                    <li class="">
+                        <a href="#">
+                            <svg class="social-link w-6 h-6 fill-stone-50 cursor-pointer hover:fill-[#c13584]">
+                                <use href="/svg/sprites.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="py-2"></div>
+            <div class="">
+                <h3 class="text-sm font-semibold">Navegacion</h3>
+                <div class="py-0.5"></div>
+                <nav class="flex font-thin gap-1">
+                    <ul class="basis-1/2 grow-0 space-y-1.5">
+                        <li class="underline underline-offset-4">
+                            <a href="/">Inicio</a>
+                        </li>
+                        <li class="underline underline-offset-4 space-y-1">
+                            <a href="#acerca_de">Acerca de<br> Nosotros</a>
+                        </li>
+                        <li class="underline underline-offset-4">
+                            <a href="#gallery">Galería</a>
+                        </li>
+                    </ul>
+                    <ul class="basis-1/2 grow-0 space-y-1.5">
+                        <li class="underline underline-offset-4">
+                            <a href="#contacto">Contacto</a>
+                        </li>
+                        <li class="underline underline-offset-4">
+                            <a href="#ubicacion">Ubicacion</a>
+                        </li>
+                        <li class="underline underline-offset-4">
+                            <a href="#oficinas">Oficinas</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="py-2"></div>
+            <div class="">
+                <h3 class="text-sm font-semibold">Contacto</h3>
+                <div class="py-0.5"></div>
+                <div class="space-y-0.5">
+                    <p class="text-xs font-bold">Sibra Durango (matriz)</p>
+                    <p class="flex text-stone-100 gap-2">
+                    <svg class="fill-current w-6 h-6">
+                        <use href="/svg/sprites.svg#phone"></use>
+                    </svg>
+                    <span>(618) 194-1145</span>
+                    </p>
+                </div>
+                <div class="py-1"></div>
+                <div class="space-y-0.5">
+                    <p class="text-xs font-bold">Whatsapp</p>
+                    <p class="flex text-stone-100 gap-2">
+                    <svg class="fill-current w-6 h-6">
+                        <use href="/svg/sprites.svg#phone"></use>
+                    </svg>
+                    <span>(618) 166-4111</span>
+                    </p>
+                </div>
+                <div class="py-1"></div>
+                <div class="space-y-0.5">
+                    <p class="text-xs font-bold">Correo Electronico</p>
+                    <p class="flex text-stone-100 gap-2">
+                    <svg class="fill-current w-6 h-6">
+                        <use href="/svg/sprites.svg#email"></use>
+                    </svg>
+                    <span>contacto@sibradgo.com.mx</span>
+                    </p>
+                </div>
+            </div>
+            <div class="py-4"></div>
+        </footer>
+
+        <div class="fixed bottom-4 right-4">
+            <div class="w-16 h-16 bg-green-600 flex items-center justify-center rounded-full">
+                <svg class="h-10 w-10 fill-stone-50">
+                    <use href="/svg/wsp.svg#wsp"></use>
+                </svg>
+            </div>
+        </div>
+	</body>
+</html>
