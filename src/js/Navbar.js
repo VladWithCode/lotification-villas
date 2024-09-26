@@ -66,11 +66,16 @@ export function InitNavbarObserver() {
     let observer = new IntersectionObserver(ents => {
         let sectionElem = ents[0].target
         let sectionId = sectionElem.id
-        let navbarLink = document.querySelector(`[data-navbar-link="${sectionId}"]`)
+        let navbarLinks = document.querySelectorAll(`[data-navbar-link="${sectionId}"]`)
 
-        if (navbarLink && ents[0].isIntersecting) {
-            document.querySelector("[data-navbar-link].active")?.classList.remove("active")
-            navbarLink.classList.add("active")
+        if (navbarLinks.length > 0 && ents[0].isIntersecting) {
+            document.querySelectorAll("[data-navbar-link].active").forEach(link => {
+                link.classList.remove("active")
+            })
+
+            for (let link of navbarLinks) {
+                link.classList.add("active")
+            }
         }
     }, {
         threshold: 0.5,
