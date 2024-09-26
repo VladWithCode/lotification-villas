@@ -59,7 +59,7 @@ export function InitNavbarObserver() {
             navbarLink.classList.add("active")
         }
     }, {
-        threshold: 0.1,
+        threshold: 0.5,
     })
 
     for (let section of sections) {

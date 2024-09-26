@@ -9,12 +9,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
 	</head>
 	<body class="bg-light font-main">
-        <header class="sticky grid grid-cols-3 grid-rows-1 top-0 left-0 h-20 w-full border-b border-main bg-light z-50">
-            <div class="m-auto ml-4 w-6"></div>
-            <a href="/" class="w-fit h-fit m-auto">
+        <header class="sticky grid grid-cols-3 grid-rows-1 top-0 left-0 h-20 w-full border-b border-main bg-light z-50 xl:grid-cols-8">
+            <div class="col-start-1 row-start-1 mr-auto ml-2 my-auto md:ml-auto md:mr-0 xl:col-span-3">
+                <a href="https://sibradgo.com.mx/proyectos" class="p-2 rounded bg-main text-xs text-stone-50 tracking-wide font-semibold md:text-sm md:px-4">
+                    Más Proyectos
+                </a>
+            </div>
+            <a href="/" class="col-start-2 row-start-1 flex items-center w-[80%] h-full overflow-hidden mx-auto xl:col-span-2">
                 <img src="/img/sibra_logo_256.webp" alt="Logo de Sibra Durango" class="w-full max-h-[80%] object-scale-down object-center">
             </a>
-            <div class="m-auto mr-4">
+            <div class="col-start-3 row-start-1 m-auto mr-4 xl:hidden">
                 <button
                     data-navbar-toggler
                     class="relative grid grid-cols-3 grid-rows-3 gap-0.5 w-7 h-7 group z-0">
@@ -36,8 +40,45 @@
                     <div class="flex aspect-square w-1 m-auto rounded-full bg-main"></div>
                 </button>
             </div>
+            <nav class="hidden col-start-3 row-start-1 my-auto px-4 w-full text-sm xl:flex xl:col-span-3">
+                <a 
+                    href="#inicio" 
+                    class="navbar-link flex flex-1 justify-center items-center border-b border-stone-700 p-1 active"
+                    data-navbar-link="inicio">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-full max-w-[65%] bg-stone-800 -z-10 shadow shadow-stone-400" data-navbar-link-bg></div>
+                    <div class="relative z-10" data-navbar-link-label>Inicio</div>
+                </a>
+                <a 
+                    href="#acerca"
+                    class="navbar-link flex flex-1 flex-grow-[1.2] justify-center items-center border-b border-stone-700 p-1"
+                    data-navbar-link="acerca">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-full max-w-[65%] bg-stone-800 -z-10 shadow shadow-stone-400" data-navbar-link-bg></div>
+                    <div class="relative z-10" data-navbar-link-label>Acerca De</div>
+                </a>
+                <a 
+                    href="#galeria"
+                    class="navbar-link flex flex-1 justify-center items-center border-b border-stone-700 p-1"
+                    data-navbar-link="galeria">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-full max-w-[65%] bg-stone-800 -z-10 shadow shadow-stone-400" data-navbar-link-bg></div>
+                    <div class="relative z-10" data-navbar-link-label>Galería</div>
+                </a>
+                <a 
+                    href="#oficinas"
+                    class="navbar-link flex flex-1 justify-center items-center border-b border-stone-700 p-1"
+                    data-navbar-link="oficinas">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-full max-w-[65%] bg-stone-800 -z-10 shadow shadow-stone-400" data-navbar-link-bg></div>
+                    <div class="relative z-10" data-navbar-link-label>Oficinas</div>
+                </a>
+                <a 
+                    href="#contacto"
+                    class="text-center text-stone-50 bg-accent rounded p-2"
+                    data-navbar-link="contacto">
+                    Contactanos
+                </a>
+            </nav>
+            <!-- Navbar -->
             <div 
-                class="absolute right-0 top-full w-0 overflow-hidden z-20"
+                class="absolute right-0 top-full w-0 overflow-hidden z-20 xl:hidden"
                 data-navbar-wrapper>
                 <div class="py-2 px-4 bg-light border border-t-stone-700 shadow-sm shadow-stone-400">
                     <nav 
@@ -385,7 +426,7 @@
             </div>
             <div 
                 id="oficinas"
-                class="max-w-screen-md px-4 pt-12 pb-3 mx-auto xl:max-w-screen-lg"
+                class="max-w-screen-md px-4 py-3 xl:pt-12 mx-auto xl:max-w-screen-lg"
                 data-animated-entrance="office"
                 data-section="oficinas">
                 <h2 class="text-xl text-stone-800 font-bold font-secondary xl:text-2xl">Oficinas</h2>
