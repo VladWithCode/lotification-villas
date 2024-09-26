@@ -1,9 +1,13 @@
 import "./index.css";
 import { gsap } from 'gsap'
 import "./js/AmenitySlider.js"
+import { InitNavbar, InitNavbarObserver } from './js/Navbar.js'
 import './js/animations.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Navbar
+    InitNavbar()
+    InitNavbarObserver()
     // Hero animations
     let heroBgImg = document.getElementById("hero-bg-img")
     let heroTitle = document.getElementById("hero-title")

@@ -36,6 +36,58 @@
                     <div class="flex aspect-square w-1 m-auto rounded-full bg-main"></div>
                 </button>
             </div>
+            <div 
+                class="absolute right-0 top-full w-0 overflow-hidden z-20"
+                data-navbar-wrapper>
+                <div class="py-2 px-4 bg-light border border-t-stone-700 shadow-sm shadow-stone-400">
+                    <nav 
+                        id="navbar"
+                        class="flex flex-col text-stone-600 font-bold tracking-wide space-y-3 text-nowrap"
+                        data-navbar="close">
+                        <a 
+                            href="#inicio" 
+                            class="navbar-link flex justify-end border-b border-stone-700 p-1 pb-2 active"
+                            data-navbar-link="inicio">
+                            <div class="absolute top-0 right-0 w-0 h-full bg-stone-800 -z-10 shadow shadow-stone-400" data-navbar-link-bg></div>
+                            <div class="relative z-10" data-navbar-link-label>Inicio</div>
+                        </a>
+                        <a 
+                            href="#acerca"
+                            class="navbar-link flex justify-end border-b border-stone-700 p-1 pb-2"
+                            data-navbar-link="acerca">
+                            <div class="absolute top-0 right-0 w-0 h-full bg-stone-800 -z-10 shadow-sm shadow-stone-400" data-navbar-link-bg></div>
+                            <div class="relative z-10" data-navbar-link-label>Acerca De</div>
+                        </a>
+                        <a 
+                            href="#galeria"
+                            class="navbar-link flex justify-end border-b border-stone-700 p-1 pb-2"
+                            data-navbar-link="galeria">
+                            <div class="absolute top-0 right-0 w-0 h-full bg-stone-800 -z-10 shadow-sm shadow-stone-400" data-navbar-link-bg></div>
+                            <div class="relative z-10" data-navbar-link-label>Galería</div>
+                        </a>
+                        <a 
+                            href="#ubicacion"
+                            class="navbar-link flex justify-end border-b border-stone-700 p-1 pb-2"
+                            data-navbar-link="ubicacion">
+                            <div class="absolute top-0 right-0 w-0 h-full bg-stone-800 -z-10 shadow-sm shadow-stone-400" data-navbar-link-bg></div>
+                            <div class="relative z-10" data-navbar-link-label>Ubicacion</div>
+                        </a>
+                        <a 
+                            href="#oficinas"
+                            class="navbar-link flex justify-end border-b border-stone-700 p-1 pb-2"
+                            data-navbar-link="oficinas">
+                            <div class="absolute top-0 right-0 w-0 h-full bg-stone-800 -z-10 shadow-sm shadow-stone-400" data-navbar-link-bg></div>
+                            <div class="relative z-10" data-navbar-link-label>Oficinas</div>
+                        </a>
+                        <a 
+                            href="#contacto"
+                            class="text-center text-stone-50 bg-accent rounded p-2"
+                            data-navbar-link="contacto">
+                            Contactanos
+                        </a>
+                    </nav>
+                </div>
+            </div>
         </header>
         <main class="max-w-full overflow-x-hidden">
             <div class="relative p-2" id="inicio" data-section="inicio">
