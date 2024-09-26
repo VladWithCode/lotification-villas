@@ -47,6 +47,20 @@ export function InitNavbar(navbarSelector = "#navbar", scrollOffsetY = HEADER_HE
     }
 }
 
+export function InitHeaderObserver() {
+    let topMostElem = document.getElementById("top-most")
+    let headerElem = document.getElementById("header-wrapper")
+    let observer = new IntersectionObserver(ents => {
+        if (ents[0].isIntersecting) {
+            headerElem.style.height = "5rem"
+        } else {
+            headerElem.style.height = "3rem"
+        }
+    })
+
+    observer.observe(topMostElem)
+}
+
 export function InitNavbarObserver() {
     let sections = document.querySelectorAll("[data-section]")
     let observer = new IntersectionObserver(ents => {
