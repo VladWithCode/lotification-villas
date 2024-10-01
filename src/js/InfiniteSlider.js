@@ -85,13 +85,17 @@ export class InfiniteSlider {
             e.preventDefault();
             this.stop();
             this.prev();
-            this.play();
+            if (config.enableAutoAnimate) {
+                this.play();
+            }
         });
         this.nextBtn.addEventListener('click', e => {
             e.preventDefault();
             this.stop();
             this.next();
-            this.play();
+            if (config.enableAutoAnimate) {
+                this.play();
+            }
         });
 
         if (config.enableAutoAnimate) {
