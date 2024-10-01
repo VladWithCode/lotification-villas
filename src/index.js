@@ -1,6 +1,6 @@
 import "./index.css";
 import { gsap } from 'gsap'
-import "./js/AmenitySlider.js"
+import InitAmenitySlider from "./js/AmenitySlider.js"
 import { InitHeaderObserver, InitNavbar, InitNavbarObserver } from './js/Navbar.js'
 import './js/animations.js'
 
@@ -67,4 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let elem of animateEntranceElems) {
         animationObserver.observe(elem)
     }
+
+    // AmenitySlider
+    InitAmenitySlider()
 })

@@ -169,13 +169,42 @@
                 Diseñado para ajustarse a tus necesidades.
                 </p>
                 <div class="py-1"></div>
-                <div class="relative w-dvw max-w-full overflow-hidden">
-                    <div class="relative flex overflow-y-hidden overflow-x-auto pb-8 amenity-slider md:pt-8 md:pb-12 barless" data-amenity-slider>
+                <div class="relative w-dvw max-w-full overflow-hidden z-0" data-amenity-slider-wrapper>
+                    <div class="absolute top-1/2 left-2 -translate-y-1/2 z-20">
+                        <button 
+                            id="amenity-slider-prev"
+                            class="flex items-center justify-center bg-secondary bg-opacity-60 backdrop-blur-sm rounded-full p-1 shadow-main"
+                            style="box-shadow: 0px 5px 8px -6px var(--tw-shadow-color);"
+                            data-slider-prev>
+                            <svg class="w-10 h-10 fill-main rotate-180">
+                                <use href="/svg/sprites.svg#angle"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="absolute top-1/2 right-2 -translate-y-1/2 z-20">
+                        <button
+                            id="amenity-slider-next"
+                            class="flex items-center justify-center bg-secondary bg-opacity-60 backdrop-blur-sm rounded-full p-1 shadow-main"
+                            style="box-shadow: 0px 5px 8px -6px var(--tw-shadow-color);"
+                            data-slider-next>
+                            <svg class="w-10 h-10 fill-main">
+                                <use href="/svg/sprites.svg#angle"></use>
+                            </svg>
+                        </button>
+                    </div>
 
-                        <div class="basis-full grow-0 shrink-0">
+                    <div
+                        class="relative flex overflow-visible pb-8 amenity-slider md:pt-8 md:pb-12" 
+                        data-amenity-slider
+                        data-slider-slider
+                        data-slider-animation-duration="400"
+                        data-slider-animation-sleep="1000">
+                        <div 
+                            class="basis-full grow-0 shrink-0"
+                            data-amenity-slide="0"
+                            data-slider-slide="0">
                             <div
-                                class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide md:h-52 md:w-52"
-                                data-amenity-slide="0">
+                                class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide md:h-52 md:w-52">
                                 <!-- <img src="/img/land-6.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center brightness-75 rounded-full -z-10"> -->
                                 <div class="absolute top-full left-1/2 -translate-x-1/2 -z-10" data-amenity-slide-label>
                                     <p class="text-stone-600 font-medium uppercase pt-2 md:text-lg">Pavimentación</p>
@@ -187,13 +216,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="basis-full grow-0 shrink-0">
-                            <div
-                                class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide"
-                                data-amenity-slide="0">
+                        <div 
+                            class="basis-full grow-0 shrink-0"
+                            data-amenity-slide="1"
+                            data-slider-slide="1">
+                            <div class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide">
                                 <!-- <img src="/img/land-6.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center brightness-75 rounded-full -z-10"> -->
                                 <div class="absolute top-full left-1/2 -translate-x-1/2 -z-10" data-amenity-slide-label>
-                                    <p class="text-stone-600 font-medium uppercase pt-2">Pavimentación</p>
+                                    <p class="text-stone-600 font-medium uppercase pt-2">Red Electrica Subterranea</p>
                                 </div>
                                 <div class="absolute bottom-3 left-3 text-light invisible" data-amenity-slide-data>
                                     <p class="font-medium uppercase" data-amenity-slide-title>Pavimentación</p>
@@ -202,10 +232,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="basis-full grow-0 shrink-0">
-                            <div
-                                class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide"
-                                data-amenity-slide="0">
+                        <div 
+                            class="basis-full grow-0 shrink-0"
+                            data-amenity-slide="2"
+                            data-slider-slide="2">
+                            <div class="relative h-40 w-40 rounded-full mx-auto amenity-slider-slide">
                                 <!-- <img src="/img/land-6.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center brightness-75 rounded-full -z-10"> -->
                                 <div class="absolute top-full left-1/2 -translate-x-1/2 -z-10" data-amenity-slide-label>
                                     <p class="text-stone-600 font-medium uppercase pt-2">Pavimentación</p>
@@ -219,26 +250,6 @@
                         </div>
                     </div>
 
-                    <div class="absolute top-1/2 left-2 -translate-y-1/2">
-                        <button 
-                            id="amenity-slider-prev"
-                            class="flex items-center justify-center bg-secondary bg-opacity-60 backdrop-blur-sm rounded-full p-1 shadow-main"
-                            style="box-shadow: 0px 5px 8px -6px var(--tw-shadow-color);">
-                            <svg class="w-10 h-10 fill-main rotate-180">
-                                <use href="/svg/sprites.svg#angle"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="absolute top-1/2 right-2 -translate-y-1/2">
-                        <button
-                            id="amenity-slider-next"
-                            class="flex items-center justify-center bg-secondary bg-opacity-60 backdrop-blur-sm rounded-full p-1 shadow-main"
-                            style="box-shadow: 0px 5px 8px -6px var(--tw-shadow-color);">
-                            <svg class="w-10 h-10 fill-main">
-                                <use href="/svg/sprites.svg#angle"></use>
-                            </svg>
-                        </button>
-                    </div>
                 </div>
             </div>
             <div class="py-4"></div>
