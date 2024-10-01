@@ -16,6 +16,9 @@ export class InfiniteSlider {
     isBigSlider = false;
     noBullets = false
 
+    // Callbacks
+    afterAnimate;
+
     constructor(containerElemSelector = '[data-slider-container]', config = { skipBulletBtns: false, enableAutoAnimate: false }) {
         this.containerElem = document.querySelector(containerElemSelector);
         this.sliderElem = this.containerElem.querySelector(
@@ -125,6 +128,10 @@ export class InfiniteSlider {
         this.bulletElems.forEach((bulletBtn, i) =>
             bulletBtn.classList.toggle('is-active', cMod === i)
         );
+
+        if (typeof this.afterAnimate === 'function') {
+            this.afterAnimate(this)
+        }
     }
 
     prev() {
