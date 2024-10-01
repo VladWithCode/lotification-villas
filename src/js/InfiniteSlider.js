@@ -28,10 +28,10 @@ export class InfiniteSlider {
         this.nextBtn = this.containerElem.querySelector('[data-slider-next]');
         this.animationDuration = parseInt(
             this.sliderElem.dataset.sliderAnimationDuration
-        );
+        ) || this.animationDuration;
         this.animationSleep = parseInt(
             this.sliderElem.dataset.sliderAnimationSleep
-        );
+        ) || this.animationSleep;
         this.totalSlides = this.slidesElems.length;
         this.isBigSlider = window.matchMedia('(width >= 768px)').matches;
 
