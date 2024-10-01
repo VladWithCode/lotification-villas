@@ -16,7 +16,7 @@ export class InfiniteSlider {
     isBigSlider = false;
     noBullets = false
 
-    constructor(containerElemSelector = '[data-slider-container]', config = { skipBulletBtns: false }) {
+    constructor(containerElemSelector = '[data-slider-container]', config = { skipBulletBtns: false, enableAutoAnimate: false }) {
         this.containerElem = document.querySelector(containerElemSelector);
         this.sliderElem = this.containerElem.querySelector(
             '[data-slider-slider]'
@@ -62,13 +62,6 @@ export class InfiniteSlider {
             this.animate(0);
         });
 
-        this.containerElem.addEventListener('pointerenter', () => {
-            this.stop();
-        });
-        this.containerElem.addEventListener('pointerleave', () => {
-            this.play();
-        });
-
         this.sliderElem.prepend(
             this.slidesElems[this.totalSlides - 1].cloneNode(true)
         );
@@ -100,6 +93,17 @@ export class InfiniteSlider {
             this.next();
             this.play();
         });
+
+        if (config.enableAutoAnimate) {
+            this.containerElem.addEventListener('pointerenter', () => {
+                this.stop();
+            });
+            this.containerElem.addEventListener('pointerleave', () => {
+                this.play();
+            });
+
+            this.play()
+        }
     }
 
     animate(ms = this.animationDuration) {
