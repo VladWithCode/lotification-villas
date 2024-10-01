@@ -296,23 +296,23 @@
                 <div class="py-0.5"></div>
                 <p class="text-stone-300 text-center" data-animated-entrance="gallery">Mira las fotos que tenemos de Villa Emperadores</p>
                 <div class="py-2 xl:py-3"></div>
-                <div class="relative h-[75vh] w-dvw max-w-full pb-12">
-                    <div class="relative h-full flex overflow-auto barless" data-animated-entrance="gallery-slides">
-                        <div class="basis-full grow-0 shrink-0 max-w-full h-full">
-                            <img class="w-full h-full object-cover object-center" src="/img/land-6.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
+                <div class="relative h-[75vh] w-dvw max-w-full pb-12" data-gallery-slider>
+                    <div class="relative h-full flex overflow-visible" data-animated-entrance="gallery-slides" data-slider-slider>
+                        <div class="basis-full grow-0 shrink-0 max-w-full h-full" data-slider-slide="0">
+                            <img class="w-full h-full object-cover object-center" src="/img/land-1.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
                         </div>
-                        <div class="basis-full grow-0 shrink-0 max-w-full h-full">
-                            <img class="w-full h-full object-cover object-center" src="/img/land-6.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
+                        <div class="basis-full grow-0 shrink-0 max-w-full h-full" data-slider-slide="1">
+                            <img class="w-full h-full object-cover object-center" src="/img/land-2.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
                         </div>
-                        <div class="basis-full grow-0 shrink-0 max-w-full h-full">
-                            <img class="w-full h-full object-cover object-center" src="/img/land-6.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
+                        <div class="basis-full grow-0 shrink-0 max-w-full h-full" data-slider-slide="2">
+                            <img class="w-full h-full object-cover object-center" src="/img/land-3.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
                         </div>
-                        <div class="basis-full grow-0 shrink-0 max-w-full h-full">
-                            <img class="w-full h-full object-cover object-center" src="/img/land-6.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
+                        <div class="basis-full grow-0 shrink-0 max-w-full h-full" data-slider-slide="3">
+                            <img class="w-full h-full object-cover object-center" src="/img/land-4.jpg" alt="Fotografía del desarrollo y terrenos en Villa Emperadores">
                         </div>
                     </div>
                     <div class="absolute bottom-0 left-0 right-0 flex h-12 bg-secondary">
-                        <button class="flex basis-1/3 grow-0 shrink-0 border-r-2 border-main">
+                        <button class="flex basis-1/3 grow-0 shrink-0 border-r-2 border-main" data-slider-prev>
                             <svg class="m-auto w-10 h-10 fill-main rotate-180">
                                 <use href="/svg/sprites.svg#angle"></use>
                             </svg>
@@ -336,10 +336,9 @@
                         </div>
                         <div class="basis-1/6 grow-0 shrink-0 bg-stone-50">
                             <select class="w-full h-full text-lg text-center" name="gallery-slide-select" id="gallery-slide-select">
-                                <option value="0">1</option>
                             </select>
                         </div>
-                        <button class="flex basis-1/3 grow-0 shrink-0 border-l-2 border-main">
+                        <button class="flex basis-1/3 grow-0 shrink-0 border-l-2 border-main" data-slider-next>
                             <svg class="m-auto w-10 h-10 fill-main">
                                 <use href="/svg/sprites.svg#angle"></use>
                             </svg>

@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import InitAmenitySlider from "./js/AmenitySlider.js"
 import { InitHeaderObserver, InitNavbar, InitNavbarObserver } from './js/Navbar.js'
 import './js/animations.js'
+import InitGallery from "./js/Gallery.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar
@@ -68,6 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
         animationObserver.observe(elem)
     }
 
-    // AmenitySlider
+    // Amenity Slider
     InitAmenitySlider()
+    
+    // Gallery Slider
+    InitGallery()
 })
