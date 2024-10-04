@@ -2,7 +2,7 @@ import { InfiniteSlider } from "./InfiniteSlider";
 
 export default function InitGallery() {
     // Slider
-    const slider = new InfiniteSlider("[data-gallery-slider]", { skipBulletBtns: true })
+    const slider = new InfiniteSlider("[data-gallery-slider]", { skipBulletBtns: true, enableDragging: false })
     slider.translateSlideToCenter()
 
     let sliderSelect = document.getElementById("gallery-slide-select")
