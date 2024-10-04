@@ -1,25 +1,46 @@
+const DEFAULT_CONFIG = {
+    enableDragging: true,
+    enableAutoAnimate: false,
+    useMultiSlideView: false,
+    skipBulletBtns: false,
+    multiSlideCount: 1,
+}
+
 export class InfiniteSlider {
     /**
       * @prop {HTMLElement} containerElem - The Slider wrapper
       */
-    containerElem;
-    sliderElem;
-    slidesElems;
-    bulletElems = [];
-    prevBtn;
-    nextBtn;
-    autoSlideIntvId;
-    totalSlides;
-    currentSlide = 0;
-    animationDuration = 500;
-    animationSleep = 1500;
-    isBigSlider = false;
-    noBullets = false
+    containerElem
+    sliderElem
+    slidesElems
+    bulletElems = []
+    prevBtn
+    nextBtn
+    autoSlideIntvId
+    totalSlides
+    currentSlide = 0
+    isPlaying = false
+    animationDuration = 500
+    animationSleep = 1500
+    isBigSlider = false
+    isDragging = false
+
+    // Config
+    config = DEFAULT_CONFIG
 
     // Callbacks
-    afterAnimate;
+    afterAnimate
 
-    constructor(containerElemSelector = '[data-slider-container]', config = { skipBulletBtns: false, enableAutoAnimate: false }) {
+    constructor(
+        containerElemSelector = '[data-slider-container]', 
+        config,
+    ) {
+        if (config) {
+            this.config = {
+                ...this.config,
+                ...config,
+            }
+        }
         this.containerElem = document.querySelector(containerElemSelector);
         this.sliderElem = this.containerElem.querySelector(
             '[data-slider-slider]'
@@ -38,8 +59,7 @@ export class InfiniteSlider {
         this.totalSlides = this.slidesElems.length;
         this.isBigSlider = window.matchMedia('(width >= 768px)').matches;
 
-        this.noBullets = config.skipBulletBtns
-        if (!config.skipBulletBtns) {
+        if (!this.config.skipBulletBtns) {
             const sliderNavigation = createElement('div', {
                 className: 'slider-navigation',
             });
@@ -57,6 +77,9 @@ export class InfiniteSlider {
                 this.containerElem.append(sliderNavigation);
             }
         }
+        this.multiSlideViewOn = config.useMultiSlideView
+        this.multiSlideCount = config.multiSlideCount
+        this.autoAnimate = config.enableAutoAnimate
 
         this.sliderElem.addEventListener('transitionend', () => {
             if (this.currentSlide <= -1)
@@ -88,7 +111,7 @@ export class InfiniteSlider {
             e.preventDefault();
             this.stop();
             this.prev();
-            if (config.enableAutoAnimate) {
+            if (this.config.enableAutoAnimate) {
                 this.play();
             }
         });
@@ -96,12 +119,54 @@ export class InfiniteSlider {
             e.preventDefault();
             this.stop();
             this.next();
-            if (config.enableAutoAnimate) {
+            if (this.config.enableAutoAnimate) {
                 this.play();
             }
         });
 
-        if (config.enableAutoAnimate) {
+        if (this.config.enableDragging) {
+            let startX = 0
+            let accDrag = 0
+            let slideThreshold = Math.floor(this.slidesElems[0].scrollWidth / 2)
+            this.containerElem.addEventListener('pointerdown', e => {
+                this.containerElem.style.cursor = 'grabbing'
+                this.isDragging = true
+                startX = e.x
+            })
+            this.containerElem.addEventListener('pointermove', e => {
+                if (this.isDragging) {
+                    accDrag += e.movementX
+
+                    const translateX = this.multiSlideViewOn 
+                        ? this.calcTranslateAmount(this.isBigSlider)
+                        : 100;
+                    this.sliderElem.style.transform = `translateX(calc(${(-this.currentSlide - 1) * translateX}% + ${accDrag}px))`
+
+                    if (Math.abs(accDrag) >= slideThreshold) {
+                        return
+                    }
+                }
+            })
+            this.containerElem.addEventListener('pointerup', () => {
+                this.containerElem.style.cursor = 'auto'
+
+                if (Math.abs(accDrag) >= slideThreshold) {
+                    if (0 < accDrag) {
+                        this.prev()
+                    } else {
+                        this.next()
+                    }
+                } else {
+                    this.animate()
+                }
+                startX = 0
+                accDrag = 0
+
+                this.isDragging = false
+            })
+        }
+
+        if (this.config.enableAutoAnimate) {
             this.containerElem.addEventListener('pointerenter', () => {
                 this.stop();
             });
@@ -117,9 +182,6 @@ export class InfiniteSlider {
         const cMod = this.calcSlideMod(this.currentSlide, this.totalSlides);
 
         this.sliderElem.style.transitionDuration = `${ms}ms`;
-        /* 		this.sliderElem.style.transform = `translateX(${
-            (-this.currentSlide - 1) * 100
-        }%)`; */
         this.translateSlideToCenter();
 
         this.slidesElems.forEach((slide, i) =>
@@ -152,6 +214,10 @@ export class InfiniteSlider {
     }
 
     play() {
+        if (this.autoSlideIntvId) {
+            clearInterval(this.autoSlideIntvId)
+        }
+
         this.autoSlideIntvId = setInterval(
             this.next,
             this.animationSleep + this.animationDuration
@@ -160,10 +226,13 @@ export class InfiniteSlider {
 
     stop() {
         clearInterval(this.autoSlideIntvId);
+        this.autoSlideIntvId = undefined
     }
 
     translateSlideToCenter() {
-        const translateAmount = this.calcTranslateAmount(this.isBigSlider);
+        const translateAmount = this.multiSlideViewOn 
+            ? this.calcTranslateAmount(this.isBigSlider)
+            : 100;
 
         this.sliderElem.style.transform = `translateX(${
             (-this.currentSlide - 1) * translateAmount
@@ -171,10 +240,8 @@ export class InfiniteSlider {
     }
 
     calcTranslateAmount(isBigSlider) {
-        //const mod = this.calcSlideMod(this.currentSlide, this.totalSlides);
-
         if (isBigSlider) {
-            return (1 / 3) * 100;
+            return 33.333;
         } else {
             return 100;
         }
